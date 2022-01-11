@@ -1,0 +1,145 @@
+.card {
+  overflow: hidden;
+  max-width: 327px;
+  border-radius: 0.5rem;
+  background-color: $bg-card;
+  box-shadow: 0px 20px 20px -10px rgba(23, 25, 41, 0.203087);
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  &__content {
+    padding: 2rem;
+    order: 2;
+    text-align: center;
+  }
+
+  &__image {
+    position: relative;
+    order: 1;
+
+    &-picture {
+      position: relative;
+      z-index: 6;
+      opacity: 0.75;
+      mix-blend-mode: multiply;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      background-color: $clr-accent;
+    }
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.14;
+    color: $clr-heading;
+    &-accent {
+      color: $clr-accent;
+    }
+  }
+
+  &__text {
+    margin-top: 1rem;
+    font-size: 0.937rem;
+    line-height: 1.66;
+    color: $clr-text;
+  }
+
+  &__footer {
+    margin-top: 2.5rem;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__stat {
+    &-count {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $clr-heading;
+    }
+
+    &-title {
+      font-family: $ff-secondary;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $clr-stats;
+    }
+  }
+}
+
+@media (min-width: 60rem) {
+  .card {
+    max-width: 1110px;
+    &__inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    &__content {
+      padding: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      order: 1;
+
+      &-inner {
+        max-width: 405px;
+        margin-left: auto;
+      }
+    }
+
+    &__image {
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    &__title {
+      font-size: 2.25rem;
+    }
+
+    &__text {
+      margin-top: 1.5rem;
+      max-width: 374px;
+    }
+
+    &__footer {
+      margin-top: 4.5rem;
+    }
+
+    &__stats {
+      flex-direction: row;
+      gap: 3.5rem;
+    }
+  }
+}
+
+@media (min-width: 60rem) and (max-width: 65.5rem) {
+  .card {
+    &__image {
+      &-picture {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

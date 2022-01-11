@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+@import "./reset";
+@import "./vars";
+
+body {
+  font-family: $ff-primary;
+}
+
+.section {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: $bg-component;
+}
+
+@import "./card";
