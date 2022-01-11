@@ -131,6 +131,11 @@ body {
   gap: 1.5rem;
 }
 
+.card__stat {
+  display: flex;
+  flex-direction: column;
+}
+
 .card__stat-count {
   font-size: 1.5rem;
   font-weight: 700;
@@ -138,6 +143,7 @@ body {
 }
 
 .card__stat-title {
+  order: 1;
   font-family: "Lexend Deca", sans-serif;
   font-size: 0.75rem;
   font-weight: 400;

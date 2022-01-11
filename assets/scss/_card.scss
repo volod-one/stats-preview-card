@@ -69,6 +69,8 @@
   }
 
   &__stat {
+    display: flex;
+    flex-direction: column;
     &-count {
       font-size: 1.5rem;
       font-weight: 700;
@@ -76,6 +78,7 @@
     }
 
     &-title {
+      order: 1;
       font-family: $ff-secondary;
       font-size: 0.75rem;
       font-weight: 400;
